@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ecoliving.mobile.presentation.ui.register.RegisterFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/forrest" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/card_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+
+        <TextView
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="end"
+            android:lines="2"
+            android:text="@string/register_welcome_text"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="end"
+            android:text="@string/register_welcome_text2"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-20dp"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/baseline_arrow_back_ios_new_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/register_text"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username_text"
+                app:boxStrokeColor="@color/green"
+                app:hintTextColor="@color/green"
+                app:startIconDrawable="@drawable/person_24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_text"
+                app:boxStrokeColor="@color/green"
+                app:hintTextColor="@color/green"
+                app:startIconDrawable="@drawable/mail_24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="@string/password_text"
+                app:boxStrokeColor="@color/green"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/green"
+                app:startIconDrawable="@drawable/lock_24dp">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/green"
+                android:text="@string/register_text"
+                app:cornerRadius="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif"
+                android:text="@string/go_login_text"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
