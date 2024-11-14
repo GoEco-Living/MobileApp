@@ -36,6 +36,10 @@ class RegisterFragment : Fragment() {
         binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_onboardFragment)
         }
+
+        binding.goLoginButton.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
     }
 
     override fun onDestroyView() {
