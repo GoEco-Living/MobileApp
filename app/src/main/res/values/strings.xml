@@ -11,4 +11,33 @@
     <string name="register_welcome_text2">Let’s begin the journey!</string>
     <string name="go_register_text">Don’t have any account? <b>Sign Up</b></string>
     <string name="go_login_text">Already have an account? <b>Login</b></string>
+
+    <string name="hi_name">Hi, [Name]!</string>
+    <string name="dashboard_lets">Let&apos;s Track and Improve Our Environmental Impact!</string>
+    <string name="start_calculating">Start Calculating</string>
+    <string name="track_eco">Track your eco progress</string>
+    <string name="name_app_sementara">GoEco-Living</string>
+    <string name="my_profile">My Profile</string>
+
+    <string name="my_activities">activities</string>
+    <string name="my_eco">My Eco</string>
+    <string name="my_water">Water</string>
+    <string name="my_c02">C02</string>
+    <string name="overview">Overview</string>
+    <string name="plastic">Plastic</string>
+    <string name="text_cup">Reusable cup</string>
+    <string name="text_shopping_bag">Reusable shopping bag</string>
+    <string name="text_bottle">Reusable bottle</string>
+
+    <string name="meals">Meals</string>
+    <string name="text_vegan">Vegan meals</string>
+    <string name="text_vegetarian">Vegetarian meals</string>
+    <string name="text_fish">Fish</string>
+
+    <string name="transport">Transport</string>
+    <string name="text_walk">Walk</string>
+    <string name="text_biking">Biking</string>
+    <string name="text_public_transport">Public Transport</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
