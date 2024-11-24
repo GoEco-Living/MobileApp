@@ -38,6 +38,17 @@
     <string name="text_walk">Walk</string>
     <string name="text_biking">Biking</string>
     <string name="text_public_transport">Public Transport</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="profile_text">My Profile</string>
+    <string name="email_profile_text">emailuser@gmail.com</string>
+    <string name="account_text">Account</string>
+    <string name="general_text">General</string>
+    <string name="language_text">Language</string>
+    <string name="logout_text">Logout</string>
+    <string name="about_text">About Us</string>
+    <string name="privacy_text">Privacy Policy</string>
+    <string name="rate_text">Rate GoEco-Living</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
