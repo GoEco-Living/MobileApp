@@ -49,6 +49,13 @@
     <string name="privacy_text">Privacy Policy</string>
     <string name="rate_text">Rate GoEco-Living</string>
 
+    <string name="activity_main_text">Add your Activity</string>
+    <string name="sub_activity_text">Select an Activity to Track</string>
+    <string name="plastic_activity_text">Plastic</string>
+    <string name="meal_activity_text">Meals</string>
+    <string name="transport_activity_text">Transport</string>
+    <string name="info_activity_text">This feature allows you to choose from three categories: Plastic, Meals, and Transport. By adding activities, you can monitor the environmental impact of your daily habits.
+</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
