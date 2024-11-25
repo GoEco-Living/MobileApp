@@ -120,7 +120,7 @@
                 android:layout_height="120dp"
                 android:background="@drawable/ic_circle_co2"
                 android:scaleType="center"
-                android:src="@drawable/transport_40dp"
+                android:src="@drawable/car_transport_navigation_svgrepo_com"
                 app:tint="@color/white" />
 
             <TextView
