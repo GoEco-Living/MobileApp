@@ -57,5 +57,24 @@
     <string name="info_activity_text">This feature allows you to choose from three categories: Plastic, Meals, and Transport. By adding activities, you can monitor the environmental impact of your daily habits.
 </string>
 
+    <string name="plastic_header_text">I have just used</string>
+    <string name="option_activity_text">Please pick one</string>
+    <string name="reusable_cup_option">Reusable&#xA;cup</string>
+    <string name="reusable_shopping_bag_option">Reusable&#xA;shopping bag</string>
+    <string name="reusable_bottle_option">Reusable&#xA;bottle</string>
+
+    <string name="meals_header_text">I have just eat</string>
+    <string name="vegan_option">Vegan</string>
+    <string name="vegetarian_option">Vegetarian</string>
+    <string name="fish_option">Fish</string>
+    <string name="chicken_option">Chicken</string>
+    <string name="beef_option">Beef</string>
+
+    <string name="car_option">Car</string>
+    <string name="motorbike_option">Motorbike</string>
+    <string name="public_transport_option">Public transport</string>
+    <string name="walk_option">Walk</string>
+    <string name="bike_option">Bike</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
