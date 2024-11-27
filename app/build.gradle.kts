@@ -1,8 +1,11 @@
+@file:Suppress("DEPRECATION")
+
 plugins {
     alias(libs.plugins.android.application)
     id("kotlin-android")
     id("com.google.devtools.ksp")
 }
+
 
 android {
     namespace = "com.example.ecoliving"
@@ -40,6 +43,7 @@ android {
         viewBinding = true
         buildConfig = true
     }
+
 }
 
 dependencies {
@@ -71,4 +75,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
+    implementation (libs.shimmer)
+
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 }

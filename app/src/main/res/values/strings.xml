@@ -12,8 +12,22 @@
     <string name="go_register_text">Don’t have any account? <b>Sign Up</b></string>
     <string name="go_login_text">Already have an account? <b>Login</b></string>
 
+
+    <string name="page_one_onboard_title">Make a positive impact for our planet</string>
+
+    <string name="page_one_onboard_desc">By understand and reduce your carbon footprint—step by step.</string>
+
+    <string name="page_two_onboard_title">Measure, Reduce, Thrive</string>
+
+    <string name="page_two_onboard_desc">Track your emissions and discover personalized tips to make a lasting impact on the planet.</string>
+
+    <string name="page_three_onboard_title">Your Path to a Greener Life</string>
+
+    <string name="page_three_onboard_desc">Understand your carbon impact and take meaningful steps toward sustainability with GoEco-Living.</string>
+
+
     <string name="hi_name">Hi, [Name]!</string>
-    <string name="dashboard_lets">Let&apos;s Track and Improve Our Environmental Impact!</string>
+    <string name="dashboard_lets">Lets Track and Improve Our Environmental Impact!</string>
     <string name="start_calculating">Start Calculating</string>
     <string name="track_eco">Track your eco progress</string>
     <string name="name_app_sementara">GoEco-Living</string>
