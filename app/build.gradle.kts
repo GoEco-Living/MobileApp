@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 plugins {
     alias(libs.plugins.android.application)
     id("kotlin-android")
@@ -19,7 +17,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL", "\"https://event-api.dicoding.dev/\"")
+        buildConfigField("String", "BASE_URL", "\"https://geo-be-42454951371.asia-east2.run.app/\"")
     }
 
     buildTypes {
@@ -63,19 +61,22 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.androidx.viewpager2)
     implementation (libs.glide)
+    implementation(libs.androidx.core.splashscreen)
     
     //Retrofit
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
     implementation(libs.logging.interceptor)
 
-
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     implementation (libs.shimmer)
+    implementation (libs.ybq.android.spinkit)
+    implementation(libs.dotsindicator)
 
-    implementation("com.tbuonomo:dotsindicator:5.1.0")
+    implementation(libs.androidx.datastore.datastore.preferences)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 }
