@@ -90,5 +90,11 @@
     <string name="walk_option">Walk</string>
     <string name="bike_option">Bike</string>
 
+    <string name="login_dialog_title">Login Failed</string>
+    <string name="close_dialog_title">Close</string>
+
+    <string name="register_dialog_title">Register Success</string>
+    <string name="login_dialog_error_title">Register Failed</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

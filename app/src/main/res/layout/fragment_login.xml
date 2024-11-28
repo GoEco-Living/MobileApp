@@ -80,6 +80,7 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_field"
                 android:layout_width="match_parent"
@@ -90,8 +91,10 @@
                 app:startIconDrawable="@drawable/mail_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_field_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
                     android:layout_marginBottom="12dp"
                     android:paddingStart="48dp"
                     android:paddingEnd="16dp" />
@@ -112,6 +115,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_field_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -121,6 +125,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
@@ -139,10 +144,18 @@
                 android:text="@string/go_register_text"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
-
-
         </LinearLayout>
 
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            tools:visibility="visible"
+            app:indicatorColor="@color/dark_grey"/>
 
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

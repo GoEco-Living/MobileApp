@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.ecoliving.mobile.presentation.ViewModelFactory
+import com.ecoliving.mobile.presentation.ui.dashboard.DashboardViewModel
+import com.ecoliving.mobile.presentation.ui.login.LoginViewModel
 import com.example.ecoliving.R
 import com.example.ecoliving.databinding.FragmentOnboardBinding
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
@@ -14,6 +18,10 @@ import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 class OnboardFragment : Fragment() {
     private var _binding: FragmentOnboardBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel by viewModels<DashboardViewModel> {
+        ViewModelFactory.getInstance(requireActivity())
+    }
 
 
     override fun onCreateView(
@@ -25,8 +33,24 @@ class OnboardFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.getSession().observe(viewLifecycleOwner) { user ->
+            if (user.isLogin) {
+                navigateToDashboard()
+            } else {
+                setupOnboardingUI()
+            }
+        }
+    }
+
+    private fun navigateToDashboard() {
+        findNavController().navigate(R.id.action_onboardFragment_to_dashboardFragment)
+    }
+
+    private fun setupOnboardingUI() {
         with(binding.viewPager) {
             adapter = ViewPagerAdapter()
             binding.wormDotsIndicator.attachTo(this)
@@ -39,7 +63,6 @@ class OnboardFragment : Fragment() {
         binding.registerButton.setOnClickListener {
             findNavController().navigate(R.id.action_onboardFragment_to_registerFragment)
         }
-
     }
 
     override fun onDestroyView() {

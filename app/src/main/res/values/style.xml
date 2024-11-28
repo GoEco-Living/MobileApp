@@ -6,4 +6,7 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Theme.SplashScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/green</item>
+    </style>
 </resources>
