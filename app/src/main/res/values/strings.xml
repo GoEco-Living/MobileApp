@@ -12,8 +12,22 @@
     <string name="go_register_text">Don’t have any account? <b>Sign Up</b></string>
     <string name="go_login_text">Already have an account? <b>Login</b></string>
 
+
+    <string name="page_one_onboard_title">Make a positive impact for our planet</string>
+
+    <string name="page_one_onboard_desc">By understand and reduce your carbon footprint—step by step.</string>
+
+    <string name="page_two_onboard_title">Measure, Reduce, Thrive</string>
+
+    <string name="page_two_onboard_desc">Track your emissions and discover personalized tips to make a lasting impact on the planet.</string>
+
+    <string name="page_three_onboard_title">Your Path to a Greener Life</string>
+
+    <string name="page_three_onboard_desc">Understand your carbon impact and take meaningful steps toward sustainability with GoEco-Living.</string>
+
+
     <string name="hi_name">Hi, [Name]!</string>
-    <string name="dashboard_lets">Let&apos;s Track and Improve Our Environmental Impact!</string>
+    <string name="dashboard_lets">Lets Track and Improve Our Environmental Impact!</string>
     <string name="start_calculating">Start Calculating</string>
     <string name="track_eco">Track your eco progress</string>
     <string name="name_app_sementara">GoEco-Living</string>
@@ -38,6 +52,49 @@
     <string name="text_walk">Walk</string>
     <string name="text_biking">Biking</string>
     <string name="text_public_transport">Public Transport</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="profile_text">My Profile</string>
+    <string name="email_profile_text">emailuser@gmail.com</string>
+    <string name="account_text">Account</string>
+    <string name="general_text">General</string>
+    <string name="language_text">Language</string>
+    <string name="logout_text">Logout</string>
+    <string name="about_text">About Us</string>
+    <string name="privacy_text">Privacy Policy</string>
+    <string name="rate_text">Rate GoEco-Living</string>
+
+    <string name="activity_main_text">Add your Activity</string>
+    <string name="sub_activity_text">Select an Activity to Track</string>
+    <string name="plastic_activity_text">Plastic</string>
+    <string name="meal_activity_text">Meals</string>
+    <string name="transport_activity_text">Transport</string>
+    <string name="info_activity_text">This feature allows you to choose from three categories: Plastic, Meals, and Transport. By adding activities, you can monitor the environmental impact of your daily habits.
+</string>
+
+    <string name="plastic_header_text">I have just used</string>
+    <string name="option_activity_text">Please pick one</string>
+    <string name="reusable_cup_option">Reusable&#xA;cup</string>
+    <string name="reusable_shopping_bag_option">Reusable&#xA;shopping bag</string>
+    <string name="reusable_bottle_option">Reusable&#xA;bottle</string>
+
+    <string name="meals_header_text">I have just eat</string>
+    <string name="vegan_option">Vegan</string>
+    <string name="vegetarian_option">Vegetarian</string>
+    <string name="fish_option">Fish</string>
+    <string name="chicken_option">Chicken</string>
+    <string name="beef_option">Beef</string>
+
+    <string name="car_option">Car</string>
+    <string name="motorbike_option">Motorbike</string>
+    <string name="public_transport_option">Public transport</string>
+    <string name="walk_option">Walk</string>
+    <string name="bike_option">Bike</string>
+
+    <string name="login_dialog_title">Login Failed</string>
+    <string name="close_dialog_title">Close</string>
+
+    <string name="register_dialog_title">Register Success</string>
+    <string name="login_dialog_error_title">Register Failed</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
