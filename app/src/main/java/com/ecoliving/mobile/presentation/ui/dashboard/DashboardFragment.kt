@@ -38,15 +38,7 @@ class DashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().window.statusBarColor = resources.getColor(R.color.green, null)
         viewModel.getSession().observe(requireActivity()) { user ->
-            if (!user.isLogin) {
-                findNavController().navigate(R.id.action_dashboardFragment_to_onboardFragment)
-//            } else {
-//
-//                    }
-//                } else {
-//
-//                }
-            }
+
         }
 
     }
