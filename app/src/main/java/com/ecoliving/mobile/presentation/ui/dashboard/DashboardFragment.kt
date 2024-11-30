@@ -47,5 +47,4 @@ class DashboardFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-//
 }
