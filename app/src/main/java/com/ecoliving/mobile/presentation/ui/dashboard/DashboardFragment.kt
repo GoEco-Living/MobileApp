@@ -36,7 +36,6 @@ class DashboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().window.statusBarColor = resources.getColor(R.color.green, null)
         viewModel.getSession().observe(requireActivity()) { user ->
 
         }
