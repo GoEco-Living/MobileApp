@@ -41,7 +41,7 @@ class DashboardFragment : Fragment() {
 
         viewModel.getSession().observe(requireActivity()) { user ->
             Log.d(TAG, user.isLogin.toString())
-            Log.d(TAG, user.token)
+            Log.d(TAG, user.userId)
             Log.d(TAG, user.email)
 
 //            if(user.isLogin){
