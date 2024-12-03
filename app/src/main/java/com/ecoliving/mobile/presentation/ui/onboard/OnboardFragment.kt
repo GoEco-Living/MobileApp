@@ -36,13 +36,7 @@ class OnboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupOnboardingUI()
-
-    }
-
-    private fun navigateToDashboard() {
-        findNavController().navigate(R.id.action_onboardFragment_to_dashboardFragment)
     }
 
     private fun setupOnboardingUI() {

@@ -6,21 +6,18 @@ import com.ecoliving.mobile.data.pref.dataStore
 import com.ecoliving.mobile.data.remote.repository.DashboardRepository
 import com.ecoliving.mobile.data.remote.repository.UserRepository
 import com.ecoliving.mobile.data.remote.retrofit.ApiConfig
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.runBlocking
+import com.example.ecoliving.BuildConfig
 
 object Injection {
     fun provideUserRepository(context: Context): UserRepository {
         val pref = UserPreference.getInstance(context.dataStore)
-        val user = runBlocking { pref.getSession().first() }
-        val apiService = ApiConfig.getApiService(user.token)
+        val apiService = ApiConfig.getApiService(BuildConfig.BASE_URL)
         return UserRepository.getInstance(apiService ,pref)
     }
 
     fun provideDashboardRepository(context: Context): DashboardRepository {
         val pref = UserPreference.getInstance(context.dataStore)
-        val user = runBlocking { pref.getSession().first() }
-        val apiService = ApiConfig.getApiService(user.token)
+        val apiService = ApiConfig.getApiService(BuildConfig.BASE_URL)
         return DashboardRepository.getInstance(pref ,apiService)
     }
 }
