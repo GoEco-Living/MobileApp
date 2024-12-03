@@ -21,6 +21,6 @@ object Injection {
         val pref = UserPreference.getInstance(context.dataStore)
         val user = runBlocking { pref.getSession().first() }
         val apiService = ApiConfig.getApiService(user.token)
-        return DashboardRepository.getInstance(apiService ,pref)
+        return DashboardRepository.getInstance(pref ,apiService)
     }
 }

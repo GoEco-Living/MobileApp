@@ -3,9 +3,11 @@ package com.ecoliving.mobile.presentation.ui.login
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.app.Dialog
+import android.content.ContentValues.TAG
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,16 +62,14 @@ class LoginFragment : Fragment() {
         viewModel.loginUser.observe(viewLifecycleOwner) { result ->
             if (result != null) {
                 when (result) {
-                    is Result.Loading -> {
-                        binding.progressBar.visibility = View.VISIBLE
-                    }
-
                     is Result.Error -> {
                         binding.progressBar.visibility = View.GONE
                         errorDialogBox()
                     }
-
-                    is Result.Success -> {
+                    is Result.Loading -> {
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
+                    is Result.Success ->  {
                         binding.progressBar.visibility = View.GONE
                         viewModel.saveSession(
                             UserModel(
@@ -78,6 +78,8 @@ class LoginFragment : Fragment() {
                                 true
                             )
                         )
+                        Log.d(TAG, email)
+                        Log.d(TAG, result.data.token.toString())
                         findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
                     }
                 }
