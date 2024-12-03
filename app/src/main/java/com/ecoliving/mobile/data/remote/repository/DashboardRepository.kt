@@ -18,15 +18,22 @@ class DashboardRepository private constructor(
         userPreference.logout()
     }
 
+//    companion object {
+//        @Volatile
+//        private var instance: DashboardRepository? = null
+//        fun getInstance(
+//            apiService: ApiService,
+//            userPreference: UserPreference
+//        ): DashboardRepository =
+//            instance ?: synchronized(this) {
+//                instance ?: DashboardRepository(userPreference, apiService)
+//            }.also { instance = it }
+//    }
+
     companion object {
-        @Volatile
-        private var instance: DashboardRepository? = null
         fun getInstance(
-            apiService: ApiService,
-            userPreference: UserPreference
-        ): DashboardRepository =
-            instance ?: synchronized(this) {
-                instance ?: DashboardRepository(userPreference, apiService)
-            }.also { instance = it }
+            userPreference: UserPreference,
+            apiService: ApiService
+        ) = DashboardRepository(userPreference, apiService)
     }
 }

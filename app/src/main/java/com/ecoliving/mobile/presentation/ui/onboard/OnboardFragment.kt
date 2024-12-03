@@ -37,13 +37,8 @@ class OnboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getSession().observe(viewLifecycleOwner) { user ->
-            if (user.isLogin) {
-                navigateToDashboard()
-            } else {
-                setupOnboardingUI()
-            }
-        }
+        setupOnboardingUI()
+
     }
 
     private fun navigateToDashboard() {
