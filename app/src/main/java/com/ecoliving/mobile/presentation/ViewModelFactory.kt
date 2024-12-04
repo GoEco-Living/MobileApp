@@ -8,6 +8,7 @@ import com.ecoliving.mobile.data.remote.repository.DashboardRepository
 import com.ecoliving.mobile.data.remote.repository.UserRepository
 import com.ecoliving.mobile.presentation.ui.dashboard.DashboardViewModel
 import com.ecoliving.mobile.presentation.ui.login.LoginViewModel
+import com.ecoliving.mobile.presentation.ui.profile.ProfileViewModel
 import com.ecoliving.mobile.presentation.ui.register.RegisterViewModel
 
 class ViewModelFactory private constructor(
@@ -21,6 +22,7 @@ class ViewModelFactory private constructor(
             LoginViewModel::class.java -> LoginViewModel(userRepository) as T
             RegisterViewModel::class.java -> RegisterViewModel(userRepository) as T
             DashboardViewModel::class.java -> DashboardViewModel(dashboardRepository) as T
+            ProfileViewModel::class.java -> ProfileViewModel(dashboardRepository) as T
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }
     }

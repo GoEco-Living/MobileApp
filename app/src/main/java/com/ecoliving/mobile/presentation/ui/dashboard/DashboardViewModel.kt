@@ -18,10 +18,4 @@ class DashboardViewModel(private val repository: DashboardRepository) : ViewMode
     fun getSession(): LiveData<UserModel> {
         return repository.getSession().asLiveData()
     }
-
-    fun logout() {
-        viewModelScope.launch {
-            repository.logout()
-        }
-    }
 }
