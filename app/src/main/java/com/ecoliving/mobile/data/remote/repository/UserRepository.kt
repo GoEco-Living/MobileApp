@@ -43,6 +43,8 @@ class UserRepository private constructor(
 
         return try {
             val response = apiService.login(loginRequest)
+            val user = UserModel(response.userId.toString(), response.email.toString(), true)
+            saveSession(user)
             Result.Success(response)
         } catch (e: Exception) {
             Result.Error("Login failed")

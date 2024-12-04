@@ -43,12 +43,10 @@ class DashboardFragment : Fragment() {
             Log.d(TAG, user.isLogin.toString())
             Log.d(TAG, user.userId)
             Log.d(TAG, user.email)
+        }
 
-//            if(user.isLogin){
-//                findNavController().navigate(R.id.action_dashboardFragment_to_onboardFragment)
-//            }else{
-//                findNavController().navigate(R.id.action_splashFragment_to_dashboardFragment)
-//            }
+        binding.logoProfile.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_profileFragment)
         }
     }
 

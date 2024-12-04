@@ -71,15 +71,6 @@ class LoginFragment : Fragment() {
                     }
                     is Result.Success ->  {
                         binding.progressBar.visibility = View.GONE
-                        viewModel.saveSession(
-                            UserModel(
-                                email,
-                                result.data.userId.toString(),
-                                true
-                            )
-                        )
-                        Log.d(TAG, email)
-                        Log.d(TAG, result.data.userId.toString())
                         findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
                     }
                 }

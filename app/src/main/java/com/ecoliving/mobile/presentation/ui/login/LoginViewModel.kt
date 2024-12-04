@@ -15,12 +15,6 @@ class LoginViewModel(private val repository: UserRepository) : ViewModel() {
     private val _loginUser = MutableLiveData<Result<LoginResponse>>()
     val loginUser: LiveData<Result<LoginResponse>> get() = _loginUser
 
-    fun saveSession(user: UserModel) {
-        viewModelScope.launch {
-            repository.saveSession(user)
-        }
-    }
-
     fun login(email: String, password: String) {
         _loginUser.value = Result.Loading
         viewModelScope.launch {
