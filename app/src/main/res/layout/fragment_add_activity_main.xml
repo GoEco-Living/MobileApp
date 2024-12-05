@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.ecoliving.mobile.presentation.ui.activity.AddActivityMainFragment">
+    tools:context="com.ecoliving.mobile.presentation.ui.activity.addactivity.AddActivityMainFragment">
 
     <RelativeLayout
         android:id="@+id/activiy_main_header"
@@ -48,7 +48,7 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/plastic_activity"
+            android:id="@+id/meals_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -61,18 +61,18 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/image_button_plastic"
+                    android:id="@+id/image_button_meals"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/ic_circle_myeco"
                     android:scaleType="center"
-                    android:src="@drawable/shopping_bag"
+                    android:src="@drawable/meals_40dp"
                     app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/plastic_activity_text"
+                    android:text="@string/meals"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -86,51 +86,24 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/image_button_other"
+                    android:id="@+id/image_button_transport"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/ic_circle_water"
                     android:scaleType="center"
-                    android:src="@drawable/meals_40dp"
+                    android:src="@drawable/car_transport_navigation_svgrepo_com"
                     app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/meal_activity_text"
+                    android:text="@string/transport"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/new_activity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/plastic_activity"
-            android:layout_marginStart="85dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/image_button_new"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/ic_circle_co2"
-                android:scaleType="center"
-                android:src="@drawable/car_transport_navigation_svgrepo_com"
-                app:tint="@color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/transport_activity_text"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -140,7 +113,7 @@
         android:gravity="center"
         android:layout_below="@id/activty_option"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="290dp"
         android:orientation="horizontal">
 
         <TextView

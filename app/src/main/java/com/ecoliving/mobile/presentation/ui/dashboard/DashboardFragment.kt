@@ -48,6 +48,10 @@ class DashboardFragment : Fragment() {
         binding.logoProfile.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_profileFragment)
         }
+
+        binding.startCalculatingButton.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_addActivityFragment)
+        }
     }
 
     override fun onDestroyView() {

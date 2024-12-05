@@ -68,7 +68,7 @@
     <string name="plastic_activity_text">Plastic</string>
     <string name="meal_activity_text">Meals</string>
     <string name="transport_activity_text">Transport</string>
-    <string name="info_activity_text">This feature allows you to choose from three categories: Plastic, Meals, and Transport. By adding activities, you can monitor the environmental impact of your daily habits.
+    <string name="info_activity_text">This feature allows you to choose from three categories: Meals and Transport. By adding activities, you can monitor the environmental impact of your daily habits.
 </string>
 
     <string name="plastic_header_text">I have just used</string>
