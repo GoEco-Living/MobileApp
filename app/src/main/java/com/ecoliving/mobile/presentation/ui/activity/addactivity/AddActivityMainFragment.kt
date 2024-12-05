@@ -34,6 +34,12 @@ class AddActivityMainFragment : Fragment() {
         binding.backButton.setOnClickListener{
             findNavController().navigate(R.id.action_addActivityFragment_to_dashboardFragment)
         }
+        binding.buttonMeals.setOnClickListener{
+            findNavController().navigate(R.id.action_addActivityFragment_to_mealsFragment)
+        }
+        binding.buttonTransport.setOnClickListener{
+            findNavController().navigate(R.id.action_addActivityFragment_to_transportFragment)
+        }
     }
 
     override fun onDestroyView() {

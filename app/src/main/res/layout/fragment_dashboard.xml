@@ -157,10 +157,12 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerInParent="true"
                             android:src="@drawable/ic_vegan"
-                            app:tint="@color/pink" />
+                            app:tint="@color/pink"
+                            android:adjustViewBounds="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -182,7 +184,7 @@
 
                     <!-- Vegetarian -->
                     <View
-                        android:layout_width="40dp"
+                        android:layout_width="20dp"
                         android:layout_height="40dp" />
 
                     <LinearLayout
@@ -192,10 +194,12 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerInParent="true"
                             android:src="@drawable/ic_vegetarian"
-                            app:tint="@color/blue" />
+                            app:tint="@color/blue"
+                            android:adjustViewBounds="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -227,10 +231,12 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_centerInParent="true"
                             android:src="@drawable/ic_fish"
-                            app:tint="@color/yellow" />
+                            app:tint="@color/yellow"
+                            android:adjustViewBounds="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -298,10 +304,12 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_centerInParent="true"
                             android:src="@drawable/ic_walk"
-                            app:tint="@color/pink" />
+                            app:tint="@color/pink"
+                            android:adjustViewBounds="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -333,10 +341,12 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerInParent="true"
                             android:src="@drawable/ic_biking"
-                            app:tint="@color/blue" />
+                            app:tint="@color/blue"
+                            android:adjustViewBounds="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -370,8 +380,10 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
+                            android:layout_centerInParent="true"
                             android:src="@drawable/ic_public_transport"
-                            app:tint="@color/yellow" />
+                            app:tint="@color/yellow"
+                            android:adjustViewBounds="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -414,12 +426,15 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/ic_circle_myeco">
+
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_my_eco"
-                    app:tint="@color/white" />
+                    android:src="@drawable/ic_myeco2"
+                    app:tint="@color/white"
+                    android:adjustViewBounds="true" />
+
             </RelativeLayout>
 
             <TextView

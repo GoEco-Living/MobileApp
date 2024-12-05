@@ -61,7 +61,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/image_button_meals"
+                    android:id="@+id/button_meals"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/ic_circle_myeco"
@@ -86,7 +86,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/image_button_transport"
+                    android:id="@+id/button_transport"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/ic_circle_water"
@@ -113,7 +113,7 @@
         android:gravity="center"
         android:layout_below="@id/activty_option"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="365dp"
         android:orientation="horizontal">
 
         <TextView

@@ -117,7 +117,39 @@
         <action
             android:id="@+id/action_addActivityFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
-            app:popUpTo="@id/profileFragment"
+            app:popUpTo="@id/addActivityFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addActivityFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment"
+            app:popUpTo="@id/addActivityFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addActivityFragment_to_transportFragment"
+            app:destination="@id/transportFragment"
+            app:popUpTo="@id/addActivityFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.meals.MealsFragment"
+        android:label="mealsFragment"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment"
+            app:popUpTo="@id/mealsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.transport.TransportFragment"
+        android:label="transportFragment"
+        tools:layout="@layout/fragment_transport" >
+        <action
+            android:id="@+id/action_transportFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment"
+            app:popUpTo="@id/transportFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

@@ -44,7 +44,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:background="@drawable/ic_circle_water"
+            android:background="@drawable/ic_circle_myeco"
             android:scaleType="center"
             android:src="@drawable/meals_40dp"
             app:shapeAppearanceOverlay="@style/CircularImageView"
