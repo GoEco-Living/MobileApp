@@ -11,13 +11,13 @@ import com.example.ecoliving.BuildConfig
 object Injection {
     fun provideUserRepository(context: Context): UserRepository {
         val pref = UserPreference.getInstance(context.dataStore)
-        val apiService = ApiConfig.getApiService(BuildConfig.BASE_URL)
+        val apiService = ApiConfig.getApiService()
         return UserRepository.getInstance(apiService ,pref)
     }
 
     fun provideDashboardRepository(context: Context): DashboardRepository {
         val pref = UserPreference.getInstance(context.dataStore)
-        val apiService = ApiConfig.getApiService(BuildConfig.BASE_URL)
+        val apiService = ApiConfig.getApiService()
         return DashboardRepository.getInstance(pref ,apiService)
     }
 }

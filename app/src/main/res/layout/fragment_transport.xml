@@ -44,7 +44,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:background="@drawable/ic_circle_co2"
+            android:background="@drawable/ic_circle_water"
             android:scaleType="center"
             android:src="@drawable/car_transport_navigation_svgrepo_com"
             app:shapeAppearanceOverlay="@style/CircularImageView"
@@ -182,7 +182,7 @@
                     android:id="@+id/walk_option"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/ic_circle_co2"
+                    android:background="@drawable/circle_olive"
                     android:scaleType="center"
                     android:src="@drawable/walk_svgrepo_com"
                     app:tint="@color/white" />
@@ -206,7 +206,7 @@
                     android:id="@+id/bike_option"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/ic_circle_myeco"
+                    android:background="@drawable/circle_orange"
                     android:scaleType="center"
                     android:src="@drawable/bike"
                     app:tint="@color/white" />
