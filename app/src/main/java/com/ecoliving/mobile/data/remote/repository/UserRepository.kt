@@ -43,7 +43,12 @@ class UserRepository private constructor(
 
         return try {
             val response = apiService.login(loginRequest)
-            val user = UserModel(response.userId.toString(), response.email.toString(), true)
+            val user = UserModel(
+                response.userId.toString(),
+                response.name.toString(),
+                response.email.toString(),
+                true
+            )
             saveSession(user)
             Result.Success(response)
         } catch (e: Exception) {
@@ -51,7 +56,7 @@ class UserRepository private constructor(
         }
     }
 
-    suspend fun saveSession(user: UserModel) {
+    private suspend fun saveSession(user: UserModel) {
         userPreference.saveSession(user)
     }
 

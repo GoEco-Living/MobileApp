@@ -182,7 +182,7 @@
                     android:id="@+id/chicken_option"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/ic_circle_co2"
+                    android:background="@drawable/circle_olive"
                     android:scaleType="center"
                     android:src="@drawable/chicken"
                     app:tint="@color/white" />
@@ -206,7 +206,7 @@
                     android:id="@+id/beef_option"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/ic_circle_myeco"
+                    android:background="@drawable/circle_orange"
                     android:scaleType="center"
                     android:src="@drawable/cow_7_svgrepo_com"
                     app:tint="@color/white" />

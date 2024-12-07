@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.ecoliving.mobile.presentation.ui.activity.addactivity.AddActivityMainFragment">
+    tools:context="com.ecoliving.mobile.presentation.ui.activity.AddActivityMainFragment">
 
     <RelativeLayout
         android:id="@+id/activiy_main_header"
@@ -52,68 +52,62 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/image_button_other"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/ic_circle_myeco"
+                android:scaleType="center"
+                android:src="@drawable/meals_40dp"
+                app:tint="@color/white" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/button_meals"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="@drawable/ic_circle_myeco"
-                    android:scaleType="center"
-                    android:src="@drawable/meals_40dp"
-                    app:tint="@color/white" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/meals"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/button_transport"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="@drawable/ic_circle_water"
-                    android:scaleType="center"
-                    android:src="@drawable/car_transport_navigation_svgrepo_com"
-                    app:tint="@color/white" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/transport"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                android:text="@string/meal_activity_text"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/new_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meals_activity"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/image_button_new"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/ic_circle_water"
+                android:scaleType="center"
+                android:src="@drawable/car_transport_navigation_svgrepo_com"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transport_activity_text"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/info_activity_text"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_below="@id/activty_option"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="365dp"
+        android:layout_marginTop="220dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
