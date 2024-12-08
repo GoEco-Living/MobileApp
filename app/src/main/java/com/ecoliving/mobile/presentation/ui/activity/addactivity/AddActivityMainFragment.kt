@@ -32,10 +32,10 @@ class AddActivityMainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.backButton.setOnClickListener{
-            findNavController().navigate(R.id.action_addActivityFragment_to_dashboardFragment)
+            findNavController().navigate(R.id.action_addActivityMainFragment_to_dashboardFragment)
         }
         binding.buttonMeals.setOnClickListener{
-            findNavController().navigate(R.id.action_addActivityFragment_to_mealsFragment)
+            findNavController().navigate(R.id.action_addActivityMainFragment_to_mealsFragment)
         }
         binding.buttonTransport.setOnClickListener{
             findNavController().navigate(R.id.action_addActivityFragment_to_transportFragment)

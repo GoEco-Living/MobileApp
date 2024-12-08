@@ -26,7 +26,7 @@ class TransportFragment : Fragment(R.layout.fragment_transport) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.backButton.setOnClickListener {
-            findNavController().navigate(R.id.action_transportFragment_to_addActivityFragment)
+            findNavController().navigate(R.id.action_transportFragment_to_addActivityMainFragment)
         }
     }
 
