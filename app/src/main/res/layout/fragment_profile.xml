@@ -118,7 +118,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-
                     android:layout_toEndOf="@id/logo_profile"
                     android:fontFamily="sans-serif"
                     android:paddingLeft="12dp"
