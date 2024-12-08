@@ -1,7 +1,5 @@
 package com.ecoliving.mobile.presentation.ui.dashboard
 
-import android.content.ContentValues.TAG
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,13 +9,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ecoliving.mobile.data.Result
-import com.ecoliving.mobile.data.pref.UserModel
+import com.ecoliving.mobile.data.remote.response.DashboardResponse
+import com.ecoliving.mobile.data.remote.response.MealsItem
+import com.ecoliving.mobile.data.remote.response.MealsRecommResponse
+import com.ecoliving.mobile.data.remote.response.TransportItem
+import com.ecoliving.mobile.data.remote.response.TransportRecommResponse
 import com.ecoliving.mobile.presentation.ViewModelFactory
-import com.ecoliving.mobile.presentation.ui.login.LoginViewModel
+import com.ecoliving.mobile.presentation.ui.dashboard.adapter.MealsAdapter
+import com.ecoliving.mobile.presentation.ui.dashboard.adapter.TransportAdapter
 import com.example.ecoliving.R
 import com.example.ecoliving.databinding.FragmentDashboardBinding
-import com.example.ecoliving.databinding.FragmentLoginBinding
 
 class DashboardFragment : Fragment() {
 
@@ -27,6 +30,10 @@ class DashboardFragment : Fragment() {
     private val viewModel by viewModels<DashboardViewModel> {
         ViewModelFactory.getInstance(requireActivity())
     }
+
+    private lateinit var mealsAdapter: MealsAdapter
+    private lateinit var transportsAdapter: TransportAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,16 +46,151 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getSession().observe(requireActivity()) { user ->
-            Log.d(TAG, user.isLogin.toString())
-            Log.d(TAG, user.name)
-            Log.d(TAG, user.userId)
-            Log.d(TAG, user.email)
+        mealsAdapter = MealsAdapter(emptyList())
+        transportsAdapter = TransportAdapter(emptyList())
+
+        binding.rvMeals.apply {
+            layoutManager =
+                LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = mealsAdapter
+            setHasFixedSize(true)
         }
 
-        binding.logoProfile.setOnClickListener{
+        binding.rvTransport.apply {
+            layoutManager =
+                LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = transportsAdapter
+            setHasFixedSize(true)
+        }
+
+        viewModel.getSession().observe(viewLifecycleOwner) { user ->
+            val capitalizedUsername = user.name.capitalize()
+            binding.dashboardUsername.text = capitalizedUsername
+
+            viewModel.getTotalCarbon(user.userId)
+            viewModel.dashboardUser.observe(viewLifecycleOwner) { result ->
+                if (result != null) {
+                    when (result) {
+                        is Result.Error -> {
+                            binding.progressBar.visibility = View.GONE
+                        }
+
+                        is Result.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                        }
+
+                        is Result.Success -> {
+                            binding.progressBar.visibility = View.GONE
+                            setTotalCarbon(result.data)
+                        }
+                    }
+                }
+            }
+
+            viewModel.getMealsRecommend(user.userId)
+            viewModel.mealsRecommend.observe(viewLifecycleOwner) { result ->
+                if (result != null) {
+                    when (result) {
+                        is Result.Error -> {
+                            binding.progressBar.visibility = View.GONE
+                        }
+
+                        is Result.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                        }
+
+                        is Result.Success -> {
+                            binding.progressBar.visibility = View.GONE
+                            setMealsRecommend(result.data)
+                        }
+                    }
+                }
+            }
+
+            viewModel.getTransportRecommend(user.userId)
+            viewModel.transportRecommend.observe(viewLifecycleOwner) { result ->
+                if (result != null) {
+                    when (result) {
+                        is Result.Error -> {
+                            binding.progressBar.visibility = View.GONE
+                        }
+
+                        is Result.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                        }
+
+                        is Result.Success -> {
+                            binding.progressBar.visibility = View.GONE
+                            setTransportRecommend(result.data)
+                        }
+                    }
+                }
+            }
+
+            viewModel.getMealsHistory(user.userId)
+            viewModel.listMeals.observe(viewLifecycleOwner) { result ->
+                when (result) {
+                    is Result.Loading -> {
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
+
+                    is Result.Success -> {
+                        binding.progressBar.visibility = View.GONE
+                        setMealsHistory(result.data)
+                    }
+
+                    is Result.Error -> {
+                        binding.progressBar.visibility = View.GONE
+                    }
+                }
+            }
+
+            viewModel.getTransportHistory(user.userId)
+            viewModel.listTransport.observe(viewLifecycleOwner) { result ->
+                when (result) {
+                    is Result.Loading -> {
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
+
+                    is Result.Success -> {
+                        binding.progressBar.visibility = View.GONE
+                        setTransportHistory(result.data)
+                    }
+
+                    is Result.Error -> {
+                        binding.progressBar.visibility = View.GONE
+                    }
+                }
+            }
+        }
+
+        binding.logoProfile.setOnClickListener {
             findNavController().navigate(R.id.action_dashboardFragment_to_profileFragment)
         }
+
+        binding.startCalculatingButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_addActivityMainFragment)
+        }
+    }
+
+    private fun setTransportRecommend(recommend: TransportRecommResponse) {
+        binding.transportTipsText.text = recommend.transportRecommendation
+    }
+
+    private fun setMealsRecommend(recommend: MealsRecommResponse) {
+        binding.mealsTipsText.text = recommend.mealRecommendation
+    }
+
+    private fun setTotalCarbon(total: DashboardResponse) {
+        binding.totalCarbon.text = total.totalCarbonEmission
+    }
+
+    private fun setMealsHistory(mealsList: List<MealsItem>) {
+        mealsAdapter.updateMealsList(mealsList)
+    }
+
+    private fun setTransportHistory(transportList: List<TransportItem>) {
+        transportsAdapter.updateTransportList(transportList)
     }
 
     override fun onDestroyView() {

@@ -44,7 +44,7 @@ class UserRepository private constructor(
         return try {
             val response = apiService.login(loginRequest)
             val user = UserModel(
-                response.userId.toString(),
+                response.userId,
                 response.name.toString(),
                 response.email.toString(),
                 true
