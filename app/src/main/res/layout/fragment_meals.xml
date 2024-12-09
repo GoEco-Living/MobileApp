@@ -121,10 +121,10 @@
                     android:id="@+id/vegetarian_option"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/ic_circle_water"
-                    android:scaleType="center"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:background="@drawable/ic_circle_water"
+                    android:scaleType="center"
                     android:src="@drawable/vegetarian_diet"
                     app:tint="@color/white" />
 

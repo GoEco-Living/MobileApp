@@ -110,5 +110,15 @@
 
     <string name="history_carbon_result">10.5</string>
 
+    <string name="meals_recommmen_header_text">Your Activity</string>
+    <string name="sub_meals_text">Results from Your Meals Choice</string>
+    <string name="activity_text">Activty</string>
+    <string name="item_text">Item</string>
+    <string name="result_meals_activity">You’ve contributed</string>
+    <string name="result_meals_carbon">0.0</string>
+    <string name="carbon_text">% carbon</string>
+    <string name="save_activity">Save Activity</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,13 +1,15 @@
 package com.ecoliving.mobile.data.remote.repository
 
+import com.ecoliving.mobile.data.Result
+import com.ecoliving.mobile.data.pref.UserModel
 import com.ecoliving.mobile.data.remote.retrofit.ApiService
 import com.ecoliving.mobile.data.remote.response.MealsResponse
 import com.ecoliving.mobile.data.pref.UserPreference
-import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.Flow
 
 data class MealsRequest(
-    val type: String,
     val userId: Int,
+    val type: String,
     val predictedEmission: Boolean
 )
 
@@ -15,30 +17,28 @@ class MealsRepository private constructor(
     private val apiService: ApiService,
     private val userPreference: UserPreference
 ) {
-    suspend fun mealsUser(type: String, predictedEmission: Boolean): MealsResponse {
-        val userId = userPreference.getSession().first().userId
+    suspend fun addMealsActivity(
+        userId: Int,
+        type: String,
+        predictedEmission: Boolean
+    ): Result<MealsResponse> {
+        return try {
+            val mealsUser = MealsRequest(userId, type, predictedEmission)
+            val response = apiService.addMealsActivity(mealsUser)
+            Result.Success(response)
+        } catch (e: Exception) {
+            Result.Error("Failed add activity")
+        }
+    }
 
-        val request = MealsRequest(
-            type = type,
-            userId = userId,
-            predictedEmission = predictedEmission
-        )
-        return apiService.meals(request)
+    fun getSession(): Flow<UserModel> {
+        return userPreference.getSession()
     }
 
     companion object {
-        @Volatile
-        private var INSTANCE: MealsRepository? = null
-
         fun getInstance(
             apiService: ApiService,
             userPreference: UserPreference
-        ): MealsRepository {
-            return INSTANCE ?: synchronized(this) {
-                val instance = MealsRepository(apiService, userPreference)
-                INSTANCE = instance
-                instance
-            }
-        }
+        ) = MealsRepository(apiService, userPreference)
     }
 }

@@ -26,11 +26,12 @@ interface ApiService {
     ): LoginResponse
 
     @POST("meals")
-    suspend fun meals(
+    suspend fun addMealsActivity(
         @Body request: MealsRequest
     ): MealsResponse
 
     @GET("user/{id}/dashboard")
+
     suspend fun getDashboardUser(
         @Path("id") id: Int
     ): DashboardResponse
