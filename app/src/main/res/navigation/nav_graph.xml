@@ -116,7 +116,52 @@
         <action
             android:id="@+id/action_addActivityMainFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addActivityMainFragment_to_transportFragment"
+            app:destination="@id/transportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.transport.TransportFragment"
+        android:label="fragment_transport"
+        tools:layout="@layout/fragment_transport" >
+        <action
+            android:id="@+id/action_transportFragment_to_addActivityMainFragment"
+            app:destination="@id/addActivityMainFragment"
             app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_transportFragment_to_detailsTransportActivityFragment"
+            app:destination="@id/detailsTransportActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsTransportActivityFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.transport.DetailsTransportActivityFragment"
+        android:label="fragment_details_transport_activity"
+        tools:layout="@layout/fragment_details_transport_activity" >
+        <action
+            android:id="@+id/action_detailsTransportActivityFragment_to_transportFragment"
+            app:destination="@id/transportFragment"
+            app:popUpTo="@id/transportFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailsTransportActivityFragment_to_transportResultFragment"
+            app:destination="@id/transportResultFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/transportResultFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.transport.TransportResultFragment"
+        android:label="fragment_transport_result"
+        tools:layout="@layout/fragment_transport_result" >
+        <action
+            android:id="@+id/action_transportResultFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/dashboardFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

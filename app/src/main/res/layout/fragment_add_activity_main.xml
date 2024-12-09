@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/image_button_new"
+                android:id="@+id/image_button_transport"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:background="@drawable/ic_circle_water"
