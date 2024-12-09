@@ -2,6 +2,8 @@ package com.ecoliving.mobile.data.remote.retrofit
 
 import com.ecoliving.mobile.data.remote.repository.LoginRequest
 import com.ecoliving.mobile.data.remote.repository.RegisterRequest
+import com.ecoliving.mobile.data.remote.repository.TransportRequest
+import com.ecoliving.mobile.data.remote.response.AddTransportResponse
 import com.ecoliving.mobile.data.remote.response.DashboardResponse
 import com.ecoliving.mobile.data.remote.response.LoginResponse
 import com.ecoliving.mobile.data.remote.response.MealsRecommResponse
@@ -37,4 +39,9 @@ interface ApiService {
     suspend fun getTransportRecommend(
         @Path("id") id: Int
     ): TransportRecommResponse
+
+    @POST("transport")
+    suspend fun addTransportActivity(
+        @Body request: TransportRequest
+    ): AddTransportResponse
 }
