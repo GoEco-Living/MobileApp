@@ -69,7 +69,6 @@
         android:text="@string/option_activity_text"
         android:textColor="@color/black"
         android:layout_marginTop="35dp"
-        android:textStyle=""
         android:layout_marginBottom="15dp"
         android:textSize="20sp" />
 
@@ -81,7 +80,7 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/meals_activity"
+            android:id="@+id/transport_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -156,6 +155,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/public_transport_option"
+                    android:maxLength="16"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textAlignment="center"/>
@@ -163,10 +163,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/s"
+            android:id="@+id/transport_activity_row_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/meals_activity"
+            android:layout_below="@id/transport_activity"
             android:layout_marginStart="60dp"
             android:layout_marginTop="15dp"
             android:gravity="center"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.ecoliving.mobile.presentation.ui.activity.addactivity.AddActivityMainFragment">
+    tools:context="com.ecoliving.mobile.presentation.ui.activity.AddActivityMainFragment">
 
     <RelativeLayout
         android:id="@+id/activiy_main_header"
@@ -55,7 +55,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/buttonMeals"
+                android:id="@+id/image_button_other"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:background="@drawable/ic_circle_myeco"
@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/buttonTransport"
+                android:id="@+id/image_button_transport"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:background="@drawable/ic_circle_water"

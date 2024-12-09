@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.ecoliving.mobile.data.Result
 import com.ecoliving.mobile.presentation.ViewModelFactory
 import com.ecoliving.mobile.presentation.ui.dashboard.DashboardViewModel
 import com.example.ecoliving.R
@@ -36,6 +37,15 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        viewModel.getSession().observe(viewLifecycleOwner) { user ->
+            val capitalizedUsername = user.name.capitalize()
+            binding.apply {
+                usernameUser.text = capitalizedUsername
+                emailProfile.text = user.email
+            }
+
+        }
         binding.logoutButton.setOnClickListener {
             viewModel.logout()
         }
