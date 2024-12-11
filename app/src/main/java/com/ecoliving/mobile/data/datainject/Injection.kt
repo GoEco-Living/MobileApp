@@ -4,6 +4,7 @@ import android.content.Context
 import com.ecoliving.mobile.data.pref.UserPreference
 import com.ecoliving.mobile.data.pref.dataStore
 import com.ecoliving.mobile.data.remote.repository.DashboardRepository
+import com.ecoliving.mobile.data.remote.repository.MealsRepository
 import com.ecoliving.mobile.data.remote.repository.TransportRepository
 import com.ecoliving.mobile.data.remote.repository.UserRepository
 import com.ecoliving.mobile.data.remote.retrofit.ApiConfig
@@ -26,5 +27,11 @@ object Injection {
         val pref = UserPreference.getInstance(context.dataStore)
         val apiService = ApiConfig.getApiService()
         return TransportRepository.getInstance(pref ,apiService)
+    }
+
+    fun provideMealsRepository(context: Context): MealsRepository {
+        val pref = UserPreference.getInstance(context.dataStore)
+        val apiService = ApiConfig.getApiService()
+        return MealsRepository.getInstance(apiService ,pref)
     }
 }

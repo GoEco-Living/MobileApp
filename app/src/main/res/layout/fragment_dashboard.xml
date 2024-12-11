@@ -245,6 +245,7 @@
                 android:layout_gravity="center_horizontal"
                 tools:visibility="visible"
                 app:indicatorColor="@color/dark_grey"/>
+
         </androidx.cardview.widget.CardView>
 
 

@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.Flow
 data class MealsRequest(
     val userId: Int,
     val type: String,
-    val predictedEmission: Boolean
 )
 
 class MealsRepository private constructor(
@@ -20,10 +19,9 @@ class MealsRepository private constructor(
     suspend fun addMealsActivity(
         userId: Int,
         type: String,
-        predictedEmission: Boolean
     ): Result<MealsResponse> {
         return try {
-            val mealsUser = MealsRequest(userId, type, predictedEmission)
+            val mealsUser = MealsRequest(userId, type)
             val response = apiService.addMealsActivity(mealsUser)
             Result.Success(response)
         } catch (e: Exception) {

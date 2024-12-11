@@ -15,10 +15,10 @@ class MealsViewModel (private val repository: MealsRepository) : ViewModel() {
     private val _addMeals = MutableLiveData<Result<MealsResponse>>()
     val addMeals: LiveData<Result<MealsResponse>> get() = _addMeals
 
-    fun addMealsActivity(userId: Int, type: String, predictedEmission: Boolean) {
+    fun addMealsActivity(userId: Int, type: String) {
         _addMeals.value = Result.Loading
         viewModelScope.launch {
-            val addMeals = repository.addMealsActivity(userId, type, predictedEmission)
+            val addMeals = repository.addMealsActivity(userId, type)
             _addMeals.value = addMeals
         }
     }
