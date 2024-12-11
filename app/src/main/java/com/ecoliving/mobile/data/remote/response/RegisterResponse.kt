@@ -5,4 +5,3 @@ data class RegisterResponse(
 	val userId: Int? = null,
 	val email: String? = null
 )
-

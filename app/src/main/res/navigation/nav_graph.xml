@@ -110,7 +110,7 @@
     </fragment>
     <fragment
         android:id="@+id/addActivityMainFragment"
-        android:name="com.ecoliving.mobile.presentation.ui.activity.AddActivityMainFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.addactivity.AddActivityMainFragment"
         android:label="fragment_add_activity_main"
         tools:layout="@layout/fragment_add_activity_main" >
         <action
@@ -151,6 +151,54 @@
             app:destination="@id/transportResultFragment"
             app:launchSingleTop="false"
             app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addActivityMainFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment"
+            app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addActivityFragment_to_transportFragment"
+            app:destination="@id/transportFragment"
+            app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.meals.MealsFragment"
+        android:label="fragment_meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_addActivityMainFragment"
+            app:destination="@id/addActivityMainFragment"
+            app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mealsFragment_to_mealsRecommFragment"
+            app:destination="@id/mealsRecommFragement"
+            app:popUpTo="@id/mealsRecommFragement"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.transport.TransportFragment"
+        android:label="fragment_transport"
+        tools:layout="@layout/fragment_transport" >
+        <action
+            android:id="@+id/action_transportFragment_to_addActivityMainFragment"
+            app:destination="@id/addActivityMainFragment"
+            app:popUpTo="@id/addActivityMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealsRecommFragement"
+        android:name="com.ecoliving.mobile.presentation.ui.activity.meals.MealsRecommFragment"
+        android:label="mealsRecommFragment"
+        tools:layout="@layout/fragment_meals_recomm" >
+        <action
+            android:id="@+id/action_mealsRecommFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/dashboardFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

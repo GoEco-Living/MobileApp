@@ -1,12 +1,14 @@
 package com.ecoliving.mobile.data.remote.retrofit
 
 import com.ecoliving.mobile.data.remote.repository.LoginRequest
+import com.ecoliving.mobile.data.remote.repository.MealsRequest
 import com.ecoliving.mobile.data.remote.repository.RegisterRequest
 import com.ecoliving.mobile.data.remote.repository.TransportRequest
 import com.ecoliving.mobile.data.remote.response.AddTransportResponse
 import com.ecoliving.mobile.data.remote.response.DashboardResponse
 import com.ecoliving.mobile.data.remote.response.LoginResponse
 import com.ecoliving.mobile.data.remote.response.MealsRecommResponse
+import com.ecoliving.mobile.data.remote.response.MealsResponse
 import com.ecoliving.mobile.data.remote.response.RegisterResponse
 import com.ecoliving.mobile.data.remote.response.TransportRecommResponse
 import retrofit2.http.Body
@@ -25,7 +27,13 @@ interface ApiService {
         @Body request: LoginRequest
     ): LoginResponse
 
+    @POST("meals")
+    suspend fun addMealsActivity(
+        @Body request: MealsRequest
+    ): MealsResponse
+
     @GET("user/{id}/dashboard")
+
     suspend fun getDashboardUser(
         @Path("id") id: Int
     ): DashboardResponse
