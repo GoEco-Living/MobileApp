@@ -85,80 +85,80 @@ class DashboardFragment : Fragment() {
                         }
                     }
                 }
-            }
 
-            viewModel.getMealsRecommend(user.userId)
-            viewModel.mealsRecommend.observe(viewLifecycleOwner) { result ->
-                if (result != null) {
-                    when (result) {
-                        is Result.Error -> {
-                            binding.progressBar.visibility = View.GONE
-                        }
-
+                viewModel.getMealsHistory(user.userId)
+                viewModel.listMeals.observe(viewLifecycleOwner) { meals ->
+                    when (meals) {
                         is Result.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
                         }
 
                         is Result.Success -> {
                             binding.progressBar.visibility = View.GONE
-                            setMealsRecommend(result.data)
+                            setMealsHistory(meals.data)
                         }
-                    }
-                }
-            }
 
-            viewModel.getTransportRecommend(user.userId)
-            viewModel.transportRecommend.observe(viewLifecycleOwner) { result ->
-                if (result != null) {
-                    when (result) {
                         is Result.Error -> {
                             binding.progressBar.visibility = View.GONE
                         }
+                    }
+                }
 
+                viewModel.getTransportHistory(user.userId)
+                viewModel.listTransport.observe(viewLifecycleOwner) { transport ->
+                    when (transport) {
                         is Result.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
                         }
 
                         is Result.Success -> {
                             binding.progressBar.visibility = View.GONE
-                            setTransportRecommend(result.data)
+                            setTransportHistory(transport.data)
+                        }
+
+                        is Result.Error -> {
+                            binding.progressBar.visibility = View.GONE
                         }
                     }
                 }
-            }
 
-            viewModel.getMealsHistory(user.userId)
-            viewModel.listMeals.observe(viewLifecycleOwner) { result ->
-                when (result) {
-                    is Result.Loading -> {
-                        binding.progressBar.visibility = View.VISIBLE
-                    }
+                viewModel.getMealsRecommend(user.userId)
+                viewModel.mealsRecommend.observe(viewLifecycleOwner) { mealsRecomm ->
+                    if (mealsRecomm != null) {
+                        when (mealsRecomm) {
+                            is Result.Error -> {
+                                binding.progressBar.visibility = View.GONE
+                            }
 
-                    is Result.Success -> {
-                        binding.progressBar.visibility = View.GONE
-                        setMealsHistory(result.data)
-                    }
+                            is Result.Loading -> {
+                                binding.progressBar.visibility = View.VISIBLE
+                            }
 
-                    is Result.Error -> {
-                        binding.progressBar.visibility = View.GONE
+                            is Result.Success -> {
+                                binding.progressBar.visibility = View.GONE
+                                setMealsRecommend(mealsRecomm.data)
+                            }
+                        }
                     }
                 }
-            }
 
-            viewModel.getTransportHistory(user.userId)
-            viewModel.listTransport.observe(viewLifecycleOwner) { result ->
-                when (result) {
-                    is Result.Loading -> {
-                        binding.progressBar.visibility = View.VISIBLE
-                    }
+                viewModel.getTransportRecommend(user.userId)
+                viewModel.transportRecommend.observe(viewLifecycleOwner) { transportRecomm ->
+                    if (transportRecomm != null) {
+                        when (transportRecomm) {
+                            is Result.Error -> {
+                                binding.progressBar.visibility = View.GONE
+                            }
 
-                    is Result.Success -> {
-                        binding.progressBar.visibility = View.GONE
-                        setTransportHistory(result.data)
-                    }
+                            is Result.Loading -> {
+                                binding.progressBar.visibility = View.VISIBLE
+                            }
 
-                    is Result.Error -> {
-                        binding.progressBar.visibility = View.GONE
+                            is Result.Success -> {
+                                binding.progressBar.visibility = View.GONE
+                                setTransportRecommend(transportRecomm.data)
+                            }
+                        }
                     }
                 }
             }

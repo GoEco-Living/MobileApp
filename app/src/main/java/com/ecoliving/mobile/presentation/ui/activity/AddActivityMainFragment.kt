@@ -29,6 +29,10 @@ class AddActivityMainFragment : Fragment() {
             findNavController().navigate(R.id.action_addActivityMainFragment_to_transportFragment)
         }
 
+        binding.imageButtonMeals.setOnClickListener{
+            findNavController().navigate(R.id.action_addActivityMainFragment_to_mealsFragment2)
+        }
+
         binding.backButton.setOnClickListener{
             findNavController().navigate(R.id.action_addActivityMainFragment_to_dashboardFragment)
         }

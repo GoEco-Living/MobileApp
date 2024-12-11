@@ -1,12 +1,13 @@
 package com.ecoliving.mobile.data.remote.response
 
-data class Meals (
-    val type: String? = null,
-    val userId: Int? = null,
-    val predictedEmission: Boolean? = null
+data class MealsResponse(
+	val meal: Meal? = null,
+	val message: String? = null
 )
 
-data class MealsResponse (
-    val meals: Meals? = null,
-    val message: String? = null
+data class Meal(
+	val predictedEmission: Any? = null,
+	val type: String? = null,
+	val userId: Int? = null
 )
+
