@@ -7,13 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.widget.ViewPager2
 import com.ecoliving.mobile.presentation.ViewModelFactory
 import com.ecoliving.mobile.presentation.ui.dashboard.DashboardViewModel
-import com.ecoliving.mobile.presentation.ui.login.LoginViewModel
 import com.example.ecoliving.R
 import com.example.ecoliving.databinding.FragmentOnboardBinding
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 class OnboardFragment : Fragment() {
     private var _binding: FragmentOnboardBinding? = null

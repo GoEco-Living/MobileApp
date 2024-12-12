@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import com.ecoliving.mobile.data.Result
 import com.ecoliving.mobile.data.remote.response.MealsResponse
 import com.ecoliving.mobile.presentation.ViewModelFactory
-import com.ecoliving.mobile.presentation.ui.activity.transport.TransportViewModel
 import com.example.ecoliving.R
 import com.example.ecoliving.databinding.FragmentMealsBinding
 

@@ -49,6 +49,7 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-20dp"
         app:cardCornerRadius="30dp">
@@ -77,6 +78,7 @@
                     android:gravity="center"
                     android:text="@string/register_text"
                     android:textSize="32sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -149,6 +151,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/green"
+                android:textColor="@color/white"
                 android:text="@string/register_text"
                 app:cornerRadius="8dp" />
 

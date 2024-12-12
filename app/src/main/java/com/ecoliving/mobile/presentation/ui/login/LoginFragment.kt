@@ -1,30 +1,22 @@
 package com.ecoliving.mobile.presentation.ui.login
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.app.Dialog
-import android.content.ContentValues.TAG
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.ecoliving.mobile.data.Result
-import com.ecoliving.mobile.data.pref.UserModel
 import com.ecoliving.mobile.presentation.ViewModelFactory
 import com.example.ecoliving.R
 import com.example.ecoliving.databinding.FragmentLoginBinding
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
 
 
 class LoginFragment : Fragment() {

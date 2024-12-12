@@ -8,7 +8,6 @@ import com.ecoliving.mobile.data.remote.repository.MealsRepository
 import com.ecoliving.mobile.data.remote.repository.TransportRepository
 import com.ecoliving.mobile.data.remote.repository.UserRepository
 import com.ecoliving.mobile.data.remote.retrofit.ApiConfig
-import com.example.ecoliving.BuildConfig
 
 object Injection {
     fun provideUserRepository(context: Context): UserRepository {

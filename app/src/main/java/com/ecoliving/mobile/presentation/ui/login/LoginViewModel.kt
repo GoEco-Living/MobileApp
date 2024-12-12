@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ecoliving.mobile.data.pref.UserModel
 import com.ecoliving.mobile.data.remote.repository.UserRepository
 import com.ecoliving.mobile.data.remote.response.LoginResponse
 import kotlinx.coroutines.launch

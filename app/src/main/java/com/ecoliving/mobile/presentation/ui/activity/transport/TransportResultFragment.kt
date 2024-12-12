@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.ecoliving.mobile.data.Result
-import com.ecoliving.mobile.data.remote.response.AddTransportResponse
 import com.example.ecoliving.R
-import com.example.ecoliving.databinding.FragmentDetailsTransportActivityBinding
 import com.example.ecoliving.databinding.FragmentTransportResultBinding
 
 class TransportResultFragment : Fragment() {
